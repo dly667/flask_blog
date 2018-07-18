@@ -3,7 +3,7 @@
 
 # Python:
 *.pyc
-/__pycache__/
+app/__pycache__/
 main/
 
 # My configurations:
