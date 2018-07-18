@@ -4,6 +4,6 @@
 # Python:
 *.pyc
 /__pycache__/
-
+main/
 
 # My configurations:
