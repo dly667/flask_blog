@@ -1,0 +1,8 @@
+# Windows:
+.vscode/
+
+# Python:
+*.pyc
+__pycache__/
+
+# My configurations:
