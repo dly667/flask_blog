@@ -1,6 +1,7 @@
 import unittest
-from flask import current_app
-from app import create_app,db
+from flask import current_app,request
+from app import create_app, db
+
 
 class BasicsTestCase(unittest.TestCase):
     def setUp(self):
@@ -19,3 +20,10 @@ class BasicsTestCase(unittest.TestCase):
 
     def test_app_is_testing(self):
         self.assertTrue(current_app.config['TESTING'])
+
+    def test_request_exists(self):
+        with self.app.test_request_context(
+        '/make_report/2017?format=1', data={'format': 'short'}):
+            self.assertTrue(request.args.get('format') == '1')
+        
+
